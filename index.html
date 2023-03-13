@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>CITAS BARBERIA CIUDAD DE DIOS</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Pedido vía WhatsApp</h1>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required><br><br>
+      
+      <label for="producto">Tipo de corte:</label>
+      <input type="text" id="producto" name="producto" required><br><br>
+      
+      <label for="cantidad">Cantidad de personas:</label>
+      <input type="number" id="cantidad" name="cantidad" required><br><br>
+      
+      
+      <label for="mensaje">Mensaje adicional:</label>
+      <textarea id="mensaje" name="mensaje" rows="4"></textarea><br><br>
+      
+      <input type="submit" value="Enviar pedido por WhatsApp" onclick="enviarPedido()">
+    </form>
+
+    <script>
+      function enviarPedido() {
+        var nombre = document.getElementById('nombre').value;
+
+        var telefono = document.getElementById('telefono').value;
+
+        var producto = document.getElementById('producto').value;
+        
+        var cantidad = document.getElementById('cantidad').value;
+
+       
+
+        var mensaje = document.getElementById('mensaje').value;
+        
+
+        // esto sirve para crear un enlace con la informacion del pedido
+        var whatsappLink = 'https://wa.me/573234630053?text=Hola,%20quisiera%20agendar%20una%20cita.%0ANombre:%20' + nombre + '%0ATel%C3%A9fono:%20' + telefono + '%0ACorte:%20' + producto + '%0ACantidad_de_personas:%20' + cantidad + '%0AMensaje:%20' + mensaje;
+
+        //  esto es para abrir  WhatsApp en una nueva pestaña
+
+        window.open(whatsappLink);
+      }
+    </script>
+
+    
+
+
+    <p>todos los derechos reservados BARBERIA CIUDAD DE DIOS</p>
+<p>pagina creada y actualizada por tec. programacion de software santiago prasca +57-3127471876</p>
+
+  </body>
+</html>
